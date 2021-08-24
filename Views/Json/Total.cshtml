@@ -1,0 +1,39 @@
+﻿@model List<DianaGamezWebApp.Models.User>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Exp</th>
+                <th>Alias</th>
+                <th>Name</th>
+                <th>Active</th>
+                <th>Registro</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var i in Model)
+            {
+                <tr>
+                    <td scope="row">@i.id</td>
+                    <td scope="row">@i.Exp</td>
+                    <td scope="row">@i.Alias</td>
+                    <td scope="row">@i.Name</td>
+                    <td scope="row">@i.Active</td>
+                    <td scope="row">@i.RegisterDate</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+ </body>
+</html>
